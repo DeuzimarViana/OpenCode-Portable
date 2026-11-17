@@ -17,7 +17,7 @@ Nothing is written to the host machine: `HOME`, `USERPROFILE`, `XDG_CONFIG_HOME`
 ### Linux / macOS
 
 ```bash
-git clone https://github.com/OmegaVermelho/OpenCode-Portable.git
+git clone https://github.com/DeuzimarViana/OpenCode-Portable.git
 cd OpenCode-Portable
 chmod +x start.sh
 ./start.sh
@@ -26,7 +26,7 @@ chmod +x start.sh
 ### Windows
 
 ```bat
-git clone https://github.com/OmegaVermelho/OpenCode-Portable.git
+git clone https://github.com/DeuzimarViana/OpenCode-Portable.git
 cd OpenCode-Portable
 START.bat
 ```
