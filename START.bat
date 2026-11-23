@@ -1,6 +1,6 @@
 @echo off
 setlocal EnableDelayedExpansion
-title OpenCode Portable
+title MEGA CODE Portable
 
 set "ROOT_DIR=%~dp0"
 if "%ROOT_DIR:~-1%"=="\" set "ROOT_DIR=%ROOT_DIR:~0,-1%"
@@ -556,7 +556,7 @@ call :render_config
 
 echo.
 echo  =========================================================
-echo    OpenCode Portable  -  zero footprint on the host
+echo    MEGA CODE Portable  -  zero footprint on the host
 echo  =========================================================
 echo.
 echo    Engine   : !OC_BIN!
