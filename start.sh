@@ -1,6 +1,6 @@
 #!/bin/bash
 # =================================================================
-#  OpenCode Portable - Start (macOS/Linux)
+#  MEGA CODE Portable - Start (macOS/Linux)
 #  Everything runs inside this folder. Nothing touches the host.
 # =================================================================
 
@@ -90,7 +90,7 @@ done
 [ -d "$PROJECT_DIR" ] || { echo -e "${RED}[ERROR] Project directory not found: $PROJECT_DIR${RESET}"; exit 1; }
 PROJECT_DIR="$(cd "$PROJECT_DIR" && pwd)"
 
-# ─── Portable environment ───────────────────────────────────
+# ─── Portable environment ─────────────────────────────────────────────
 mkdir -p "$HOME_DIR" "$CONFIG_HOME" "$DATA_DIR/app_data" "$DATA_DIR/cache" \
          "$DATA_DIR/local_app_data" "$OC_DATA_DIR" "$LOG_DIR" "$ROOT_DIR/tools/bin"
 
@@ -103,7 +103,7 @@ export XDG_DATA_HOME="$DATA_DIR/app_data"
 export XDG_CACHE_HOME="$DATA_DIR/cache"
 export PATH="$ROOT_DIR/tools/bin:$PATH"
 
-# ─── Settings ───────────────────────────────────────────────
+# ─── Settings ─────────────────────────────────────────────────────────
 load_settings() {
     [ -f "$ENV_FILE" ] || return 0
     while IFS='=' read -r key value; do
@@ -119,7 +119,7 @@ save_settings() {
     mkdir -p "$DATA_DIR"
     cat > "$ENV_FILE" <<EOF
 # ========================================================
-# OpenCode Portable - Provider Settings
+# MEGA CODE Portable - Provider Settings
 # ========================================================
 $1
 EOF
@@ -210,7 +210,7 @@ require_key() {
     return 0
 }
 
-# ─── Provider setup ─────────────────────────────────────────
+# ─── Provider setup ─────────────────────────────────────────────────
 setup_anthropic() {
     echo ""
     echo -e "  ${CYAN}=== ANTHROPIC CLAUDE ===${RESET}"
@@ -580,7 +580,7 @@ setup_provider() {
     done
 }
 
-# ─── Config rendering ───────────────────────────────────────
+# ─── Config rendering ───────────────────────────────────────────────
 json_escape() {
     printf '%s' "$1" | sed -e 's/\\/\\\\/g' -e 's/"/\\"/g'
 }
@@ -630,7 +630,7 @@ EOF
     chmod 600 "$CONFIG_FILE" 2>/dev/null
 }
 
-# ─── Ollama helper ──────────────────────────────────────────
+# ─── Ollama helper ──────────────────────────────────────────────────
 OLLAMA_PID=""
 maybe_start_ollama() {
     [ "$AI_PROVIDER" = "local" ] || return 0
@@ -658,7 +658,7 @@ cleanup() {
 }
 trap cleanup EXIT
 
-# ─── Main ───────────────────────────────────────────────────
+# ─── Main ─────────────────────────────────────────────────────────────
 load_settings
 
 if [ "$SETUP_ONLY" -eq 1 ]; then
@@ -718,7 +718,7 @@ fi
 
 echo ""
 echo -e "${CYAN}=========================================================${RESET}"
-echo -e "  ${BOLD}OpenCode Portable${RESET} ${DIM}- zero footprint on the host${RESET}"
+echo -e "  ${BOLD}MEGA CODE Portable${RESET} ${DIM}- zero footprint on the host${RESET}"
 echo -e "${CYAN}=========================================================${RESET}"
 echo ""
 echo -e "  ${BOLD}Engine${RESET}  : ${GREEN}$(basename "$OC_BIN")${RESET}"
