@@ -710,13 +710,12 @@ case "$AI_PROVIDER" in
         ;;
 esac
 
-echo ""
-echo -e "${CYAN}    ____                   __           __${RESET}"
-echo -e "${CYAN}   / __ \\____  ____  ____/ /__  ____  / /____${RESET}"
-echo -e "${CYAN}  / / / / __ \\/ __ \\/ __  / _ \\/ __ \\/ __/ _ \\${RESET}"
-echo -e "${CYAN} / /_/ / /_/ / /_/ / /_/ /  __/ / / / /_/  __/${RESET}"
-echo -e "${CYAN} \\____/ .___/\\____/\\__,_/\\___/_/ /_/\\__/\\___/${RESET}"
-echo -e "${CYAN}     /_/${RESET}"
+# ─── Splash: corvo + MEGA CODE 4 (tools/splash.sh; NO_SPLASH=1 desativa) ───
+if [ ${#PASS_ARGS[@]} -eq 0 ] && [ -f "$ROOT_DIR/tools/splash.sh" ]; then
+    source "$ROOT_DIR/tools/splash.sh"
+    show_splash
+fi
+
 echo ""
 echo -e "${CYAN}=========================================================${RESET}"
 echo -e "  ${BOLD}OpenCode Portable${RESET} ${DIM}- zero footprint on the host${RESET}"
