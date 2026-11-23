@@ -1,4 +1,4 @@
-# OpenCode Portable
+# MEGA CODE Portable
 
 > A full AI coding agent in a terminal, running from any folder or USB drive.
 > Plug in. Launch. Code. Take it anywhere.
