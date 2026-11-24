@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Splash do OpenCode-Portable: corvo + MEGA CODE 4 antes de abrir o TUI.
+# Splash do MEGA CODE Portable: corvo + MEGA CODE 4 antes de abrir o TUI.
 # Uso (start.sh):  source "$ROOT_DIR/tools/splash.sh"; show_splash
 # Variáveis: SPLASH_DELAY (segundos, padrão 2), NO_SPLASH=1 desativa.
 

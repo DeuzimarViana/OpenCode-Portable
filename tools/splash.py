@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Splash do OpenCode-Portable: corvo em pixel art + "MEGA CODE 4" (só stdlib).
+"""Splash do MEGA CODE Portable: corvo em pixel art + "MEGA CODE 4" (só stdlib).
 
 Lê assets/raven.pix (grade de caracteres) e imprime com meio-blocos truecolor.
 Chamado por tools/splash.sh. Não escreve nada em disco.
