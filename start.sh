@@ -103,7 +103,7 @@ export XDG_DATA_HOME="$DATA_DIR/app_data"
 export XDG_CACHE_HOME="$DATA_DIR/cache"
 export PATH="$ROOT_DIR/tools/bin:$PATH"
 
-# ─── Settings ─────────────────────────────────────────────────────────
+# ─── Settings ───────────────────────────────────────────────────────
 load_settings() {
     [ -f "$ENV_FILE" ] || return 0
     while IFS='=' read -r key value; do
@@ -580,7 +580,7 @@ setup_provider() {
     done
 }
 
-# ─── Config rendering ───────────────────────────────────────────────
+# ─── Config rendering ──────────────────────────────────────────────
 json_escape() {
     printf '%s' "$1" | sed -e 's/\\/\\\\/g' -e 's/"/\\"/g'
 }
@@ -630,7 +630,7 @@ EOF
     chmod 600 "$CONFIG_FILE" 2>/dev/null
 }
 
-# ─── Ollama helper ──────────────────────────────────────────────────
+# ─── Ollama helper ───────────────────────────────────────────────
 OLLAMA_PID=""
 maybe_start_ollama() {
     [ "$AI_PROVIDER" = "local" ] || return 0
@@ -658,7 +658,7 @@ cleanup() {
 }
 trap cleanup EXIT
 
-# ─── Main ─────────────────────────────────────────────────────────────
+# ─── Main ─────────────────────────────────────────────────────
 load_settings
 
 if [ "$SETUP_ONLY" -eq 1 ]; then
@@ -710,12 +710,13 @@ case "$AI_PROVIDER" in
         ;;
 esac
 
-# ─── Splash: corvo + MEGA CODE 4 (tools/splash.sh; NO_SPLASH=1 desativa) ───
-if [ ${#PASS_ARGS[@]} -eq 0 ] && [ -f "$ROOT_DIR/tools/splash.sh" ]; then
-    source "$ROOT_DIR/tools/splash.sh"
-    show_splash
-fi
-
+echo ""
+echo -e "${CYAN}    ____                   __           __${RESET}"
+echo -e "${CYAN}   / __ \\____  ____  ____/ /__  ____  / /____${RESET}"
+echo -e "${CYAN}  / / / / __ \\/ __ \\/ __  / _ \\/ __ \\/ __/ _ \\${RESET}"
+echo -e "${CYAN} / /_/ / /_/ / /_/ / /_/ /  __/ / / / /_/  __/${RESET}"
+echo -e "${CYAN} \\____/ .___/\\____/\\__,_/\\___/_/ /_/\\__/\\___/${RESET}"
+echo -e "${CYAN}     /_/${RESET}"
 echo ""
 echo -e "${CYAN}=========================================================${RESET}"
 echo -e "  ${BOLD}MEGA CODE Portable${RESET} ${DIM}- zero footprint on the host${RESET}"
